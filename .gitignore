@@ -1,0 +1,7 @@
+﻿/01-simple-approach/Temp/
+/01-simple-approach/UserSettings/
+/01-simple-approach/Library/
+/01-simple-approach/Logs/
+/01-simple-approach/obj/Debug/
+*.sln
+*.csproj
