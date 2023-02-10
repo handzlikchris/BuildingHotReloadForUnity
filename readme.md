@@ -17,6 +17,8 @@ Code in this repo is accompanied by blog post series that digs deeper into techn
 
 # Fast Script Reload - Ready Made Tool is available on the asset store
 [![Fast Script Reload](_github/yt-link-thumb.png)](https://youtu.be/aIHnp5_JD68 "Play")
+
+
 I've built Fast Script Reload to tackle those challanges, most of them are already solved and I'm constantly working on remaining ones.
 
 You can grab a copy on the Unity Asset Store.
