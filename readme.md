@@ -14,7 +14,7 @@ Code in this repo is accompanied by blog post series that digs deeper into techn
 
 [1) Building hot reload functionality](https://immersivevrtools.com/Blog/how-to-build-hot-reload-functionality-for-unity)
 
-[2) Bringing hot reload to builds / running directly on device](https://immersivevrtools.com/Blog/how-to-build-unity-hot-reload-on-device)
+[2) Building hot reload to builds / running directly on device](https://immersivevrtools.com/Blog/how-to-build-unity-hot-reload-on-device)
 
 # Fast Script Reload - Ready Made Tool is available on the asset store
 [![Fast Script Reload](_github/yt-link-thumb.png)](https://youtu.be/aIHnp5_JD68 "Play")
