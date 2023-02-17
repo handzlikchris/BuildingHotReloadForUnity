@@ -13,7 +13,7 @@ public class OnDeviceHotreloadTestEditor : UnityEditor.Editor
         var obj = (OnDeviceHotReloadTest)target;
         
         EditorGUILayout.Space(10);
-        if (GUILayout.Button("1) Build and Run \r\n(Windows, development build)"))
+        if (GUILayout.Button("1) Build and Run \r\n(Windows, development build)\r\n\r\nHAS TO BE DEVELOPMENT BUILD\r\notherwise you won't see console"))
         {
             EditorWindow.GetWindow(Type.GetType("UnityEditor.BuildPlayerWindow,UnityEditor"));
         }
