@@ -1,22 +1,17 @@
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using System.Threading;
 using UnityEditor;
-using Debug = UnityEngine.Debug;
 
 public class HotReloadCompilation
 {
-    public const string HotReloadAssemblyNamePostfix = "hot-reload";
-
     public static Assembly Compile(string sourceCodeFilePath)
     {
-        var asmName = Guid.NewGuid().ToString().Replace("-", "") + HotReloadAssemblyNamePostfix;
+        var asmName = Guid.NewGuid().ToString().Replace("-", "") + HotReloadDynamicAssemblyDetourManager.HotReloadAssemblyNamePostfix;
         var tempFolder = Path.GetTempPath();
         var rspFilePath = tempFolder + $"{asmName}.rsp";
         var outLibraryPath = $"{tempFolder}{asmName}.dll";

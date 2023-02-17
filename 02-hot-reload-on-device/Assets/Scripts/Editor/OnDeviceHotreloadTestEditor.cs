@@ -3,19 +3,26 @@ using UnityEditor;
 using UnityEditorInternal;
 using UnityEngine;
 
-[CustomEditor(typeof(HotReloadTest))]
-public class HotReloadTestEditor : UnityEditor.Editor
+[CustomEditor(typeof(OnDeviceHotReloadTest))]
+public class OnDeviceHotreloadTestEditor : UnityEditor.Editor
 {
     public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();
 
-        var obj = (HotReloadTest)target;
-
+        var obj = (OnDeviceHotReloadTest)target;
+        
+        EditorGUILayout.Space(10);
+        if (GUILayout.Button("1) Build and Run \r\n(Windows, development build)"))
+        {
+            EditorWindow.GetWindow(Type.GetType("UnityEditor.BuildPlayerWindow,UnityEditor"));
+        }
+            
         EditorGUILayout.Space(10);
         if (GUILayout.Button("1) Test - to establish base line"))
         {
-            obj.Test();
+            
+            // obj.Test();
         }
         
         EditorGUILayout.Space(10);
@@ -33,7 +40,7 @@ public class HotReloadTestEditor : UnityEditor.Editor
         EditorGUILayout.Space(10);
         if (GUILayout.Button("4) Test to see new changes"))
         {
-            obj.Test();
+            // obj.Test();
         }
     }
 

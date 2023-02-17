@@ -17,7 +17,11 @@ public class OnDeviceHotReloadChangesSender: MonoBehaviour, INetEventListener, I
     
     void Start()
     {
-        DontDestroyOnLoad(this.gameObject);
+        //sender works only in Editor
+#if !UNITY_EDITOR
+        enabled = false;
+        return;
+#endif
 
         NetDebug.Logger = this;
         _dataWriter = new NetDataWriter();
@@ -68,7 +72,7 @@ public class OnDeviceHotReloadChangesSender: MonoBehaviour, INetEventListener, I
     
     public void OnNetworkReceiveUnconnected(IPEndPoint remoteEndPoint, NetPacketReader reader, UnconnectedMessageType messageType)
     {
-        if (messageType == UnconnectedMessageType.Broadcast)
+        if (messageType == UnconnectedMessageType.Broadcast && _connectedPeer == null)
         {
             Debug.Log($"Received discovery request. Send discovery response");
             var resp = new NetDataWriter();

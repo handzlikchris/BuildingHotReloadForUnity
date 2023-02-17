@@ -5,8 +5,7 @@ PluginImporter:
   serializedVersion: 2
   iconMap: {}
   executionOrder: {}
-  defineConstraints:
-  - UNITY_EDITOR || LiveScriptReload_IncludeInBuild_Enabled
+  defineConstraints: []
   isPreloaded: 0
   isOverridable: 0
   isExplicitlyReferenced: 0
