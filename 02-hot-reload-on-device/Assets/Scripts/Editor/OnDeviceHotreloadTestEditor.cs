@@ -19,29 +19,29 @@ public class OnDeviceHotreloadTestEditor : UnityEditor.Editor
         }
             
         EditorGUILayout.Space(10);
-        if (GUILayout.Button("1) Test - to establish base line"))
+        if (GUILayout.Button("2) Play external build and in editor"))
         {
-            
-            // obj.Test();
+            EditorApplication.isPlaying = true;
         }
         
         EditorGUILayout.Space(10);
-        if (GUILayout.Button("2) Open 'HotReloadTest.cs' and change code"))
+        GUILayout.Label("3) Confirm you can see 'connected' message in console" +
+                        "\r\n if not there may be some issues with network connectivity");
+        
+        EditorGUILayout.Space(10);
+        if (GUILayout.Button("4) Open 'OnDeviceHotReloadTest.cs' and change code\r\nmake sure to save file"))
         {
             InternalEditorUtility.OpenFileAtLineExternal(AssetDatabase.GetAssetPath(MonoScript.FromMonoBehaviour(obj)), 1);
         }
         
         EditorGUILayout.Space(10);
-        if (GUILayout.Button("3) Trigger Hot Reload"))
+        if (GUILayout.Button("5) Trigger Hot Reload"))
         {
             obj.TriggerHotReload();
         }
         
         EditorGUILayout.Space(10);
-        if (GUILayout.Button("4) Test to see new changes"))
-        {
-            // obj.Test();
-        }
+        GUILayout.Label("6) You'll see updated message both in editor and \r\nin running build");
     }
 
     private void OnEnable()

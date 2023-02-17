@@ -14,7 +14,7 @@ public class OnDeviceHotReloadTest : MonoBehaviour
     {
         while (true)
         {
-            Debug.LogError("Test Message to change at runtime - 2"); //use error to show in development console in build
+            Debug.LogError("Test Message to change at runtime - 1"); //use error to show in development console in build
             yield return new WaitForSeconds(1);
         }
     }
